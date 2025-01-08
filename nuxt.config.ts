@@ -1,40 +1,6 @@
-import { defineNuxtConfig } from "nuxt/config";
+import { defineNuxtConfig } from "nuxt/config"
 
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  app: {
-    baseURL: '/',
-    head: {
-      meta: [
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' }
-      ]
-    }
-  },
-  compatibilityDate: '2025-01-04',
-  experimental: { appManifest: false },
-  nitro: {
-    experimental: {
-      asyncContext: true
-    },
-    storage: {}
-  },
-  devtools: { enabled: false },
-  modules: [
-    '@nuxt/content',
-    ['@nuxtjs/tailwindcss', {
-      cssPath: '~/assets/css/tailwind.css',
-      configPath: 'tailwind.config',
-      exposeConfig: {
-        level: 2
-      },
-      config: {},
-      viewer: false,
-    }],
-    ['shadcn-nuxt', {
-      prefix: '',
-      componentDir: './components/ui'
-    }]
-  ],
   css: ['~/assets/css/tailwind.css'],
   postcss: {
     plugins: {
@@ -42,5 +8,26 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  ssr: false
+  app: {
+    baseURL: '/',
+    head: {
+      meta: [
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { charset: 'utf-8' }
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      ]
+    }
+  },
+  devtools: { enabled: false },
+  experimental: { appManifest: false },
+  modules: ['@nuxt/icon'],
+
+  nitro: {
+    compressPublicAssets: true,
+    minify: true
+  },
+  compatibilityDate: '2025-01-08',
+  ssr: true
 })

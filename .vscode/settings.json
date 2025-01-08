@@ -1,0 +1,14 @@
+{
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html",
+    "vue": "html"
+  },
+  "tailwindCSS.emmetCompletions": true,
+  "css.validate": false,
+  "scss.validate": false,
+  "less.validate": false,
+  "editor.inlineSuggest.enabled": true
+}

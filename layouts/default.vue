@@ -1,17 +1,12 @@
-<script setup lang="ts">
-useHead({
-  title: '',
-  link: [
-  ],
-  meta: [
-    { name: 'description', content: '' },
-    { name: 'keywords', content: '' }
-  ]
-})
+<script setup>
 </script>
 
 <template>
-  <div class="min-h-screen bg-gray-50">
-    <slot />
+  <div class="min-h-screen flex flex-col">
+    <Header />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
   </div>
 </template>
