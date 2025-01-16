@@ -130,7 +130,7 @@ const handleSubmit = async () => {
             </p>
             <div class="flex items-center space-x-4">
               <div class="text-2xl text-primary">
-                <Icon name="Mail" />
+                <Icon name="famicons:mail-outline" />
               </div>
               <a 
                 href="mailto:business@innco.cc"

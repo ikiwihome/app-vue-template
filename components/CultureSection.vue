@@ -4,12 +4,12 @@ const culture = {
   mission: {
     title: '使命',
     content: '以卓越的技术服务赋能客户创新，共同打造智能电子产业新生态',
-    icon: 'moon'
+    icon: 'line-md:moon'
   },
   vision: {
     title: '愿景',
     content: '打造国际领先的半导体技术创新平台，实现芯片设计服务的全球化',
-    icon: 'sun'
+    icon: 'line-md:star-alt-filled'
   },
   values: {
     title: '价值观',
@@ -18,7 +18,7 @@ const culture = {
       '客户为先',
       '持续创新'
     ],
-    icon: 'heart'
+    icon: 'line-md:heart-filled'
   }
 }
 </script>
@@ -38,7 +38,7 @@ const culture = {
           :style="`animation-delay: ${key === 'mission' ? 0.1 : key === 'vision' ? 0.2 : 0.3}s`"
         >
           <div class="text-4xl text-primary mb-4">
-            <Icon :name="item.icon.charAt(0).toUpperCase() + item.icon.slice(1)" />
+            <Icon :name="item.icon" />
           </div>
           <h3 class="text-xl font-bold text-dark-gray mb-4">
             {{ item.title }}
